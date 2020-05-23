@@ -1,0 +1,34 @@
+<%= form_for @song do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :artist %>
+	<%= f.text_field :artist_id %>
+	<br>
+	<%= f.label :genre %>
+	<%= f.text_field :genre_id %>
+	<br>
+	<%= f.submit %>
+<% end %>
+
+<%= link_to "song index", songs_path %>
+<br>
+<%= link_to "artist index", artists_path %>
+<br>
+<%= link_to "genre index", genres_path  %>
+<br>
+
+<h2>Artist Key:</h2>
+<ul>
+<% @artists.each do |artist| %>
+	<li><%= artist.name %> - <%= artist.id %></li> 
+<% end %>
+</ul>
+
+
+<h2>Genre Key:</h2>
+<ul>
+<% @genres.each do |genre| %>
+	<li><%= genre.name %> - <%= genre.id %></li> 
+<% end %>
+</ul>

@@ -1,0 +1,13 @@
+<h1>Edit Genre: </h1>
+<%= form_for @genre do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.submit %>
+<% end %>
+<h2>Index Menu</h2>
+<%= link_to "song index", songs_path %>
+<br>
+<%= link_to "artist index", artists_path %>
+<br>
+<%= link_to "genre index", genres_path  %>

@@ -1,0 +1,10 @@
+<h1><%= @artist.name %></h1>
+<h2>Bio:</h2>
+<p><%= @artist.bio %></p>
+<%= link_to "edit artist", edit_artist_path(@artist) %>
+<br>
+<%= link_to "songs index", songs_path  %>
+<br>
+<%= link_to "artists index", artists_path %>
+<br>
+<%= link_to "genres index", genres_path %>
