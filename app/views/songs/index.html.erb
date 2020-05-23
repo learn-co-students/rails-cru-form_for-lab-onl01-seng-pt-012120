@@ -1,0 +1,17 @@
+<h1>Songs Index</h1>
+<ol>
+	<% @songs.each do |song| %>
+		<li><p>"<%= link_to song.name, song_path(song) %>"</p> - <%= link_to song.artist.name, artist_path(song.artist) %></li>
+	<% end %>
+</ol>
+
+<h2>Create New:</h2>
+<%= link_to "new song", new_song_path %>
+<br>
+<%= link_to "new genre", new_genre_path %>
+<br>
+<%= link_to "new artist", new_artist_path %>
+<h2>Index Menu:</h2>
+<%= link_to "artists index", artists_path %>
+<br>
+<%= link_to "genres index", genres_path %>

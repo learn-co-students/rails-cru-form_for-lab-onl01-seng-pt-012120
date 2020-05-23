@@ -1,0 +1,15 @@
+<h1>Create New Artist: </h1>
+<%= form_for @artist do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :bio %>
+	<%= f.text_area :bio %>
+	<%= f.submit %>
+<% end %>
+<h2>Index Menu</h2>
+<%= link_to "song index", songs_path %>
+<br>
+<%= link_to "artist index", artists_path %>
+<br>
+<%= link_to "genre index", genres_path  %>
