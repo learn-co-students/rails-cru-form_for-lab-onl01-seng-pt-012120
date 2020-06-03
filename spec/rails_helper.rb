@@ -37,7 +37,9 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
 
   config.before(:suite) do
+    # DB.run('SET FOREIGN_KEY_CHECKS=0;')
     DatabaseCleaner.clean_with(:truncation)
+    # DB.run('SET FOREIGN_KEY_CHECKS=1;')
   end
 
   config.before(:each) do

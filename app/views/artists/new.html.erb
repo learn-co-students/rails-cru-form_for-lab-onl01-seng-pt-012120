@@ -1,11 +1,14 @@
 
-<h3> Artist Form </h3>
+<h3>Artist Form</h3>
 
-  <%= form_tag artist_path do %>
+  <%= form_for(@artist) do |f| %>
 
-    <label> Artist Name: </label><br>
-      <%=text_field_tag :'artist[name]'%><br>
+    <label>Artist:</label><br>
+      <%= f.text_field :name%><br>
 
-    <input type="submit" value="Create Artist">
+    <label>Bio:</label><br>
+      <%= f.text_field :bio%><br>
 
-  <%end%>
+  <%= f.submit %>
+
+<% end%>

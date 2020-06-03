@@ -5,15 +5,11 @@ class SongsController < ApplicationController
   end
 
   def show
-    @song = Song.all
+    @song = Song.find(params[:id])
   end
 
   def new
     @song = Song.new
-  end
-
-  def edit
-    @song = Song.find(params[:id])
   end
 
   def create
@@ -21,6 +17,10 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
     @song.save
     redirect_to song_path(@song)
+  end
+
+  def edit
+    @song = Song.find(params[:id])
   end
 
   def update
