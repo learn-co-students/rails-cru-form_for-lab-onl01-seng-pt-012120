@@ -1,6 +1,6 @@
  class SongsController < ApplicationController 
 
-
+    #<td><%= link_to "My genre", "/genre/id" %></td>
     # t.string   "name"
     # t.integer  "artist_id"
     # t.integer  "genre_id"
@@ -14,10 +14,12 @@
     end
 
     def create
-        @song = Song.new(song_params( :name, :artist_id, :genre_id))
+        # @guest = current_user.guests.build(params)
+        @song = Song.new(song_params(:name, :artist_id, :genre_id))
 		@song.save
 		redirect_to song_path(@song)
     end
+
 
     def show
         @song = Song.find(params[:id])
