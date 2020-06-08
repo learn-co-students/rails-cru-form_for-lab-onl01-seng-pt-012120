@@ -7,5 +7,5 @@
 
 
 
-<p><%= link_to "My genre", genre_path(@song.genre)%></p>
-<p><%= link_to "My artist", artist_path(@song.artist) %></p>
+<p><%= link_to @song.genre.name, genre_path(@song.genre)%></p>
+<p><%= link_to @song.artist.name, artist_path(@song.artist) %></p>

@@ -1,8 +1,7 @@
 
 
 
-    <%= form_for(@songs) do |f| %>
-        <label>song_name:</label><br>
-        <%= f.text_field :name %><br>
-        <% end %>
+    <%= @songs.each do |song| %>
+    <p><%=  song.name %></p>
+     <% end %>
         
